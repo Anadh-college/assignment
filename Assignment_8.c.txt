@@ -1,0 +1,90 @@
+#include <stdio.h>
+
+int add(int a, int b) 
+{
+  return a+b;
+}
+
+int sub(int a, int b) 
+{
+  return a-b;
+}
+
+int mult(int a, int b)
+{
+  return a*b;
+}
+
+float div(int a, int b)
+{
+  return a/b;
+}
+
+int fact(int n) 
+{
+int i, f = 1;
+for(i=1; i<=n; i++) 
+  {
+    f = f * i;
+  }
+return f;
+}
+
+
+int main() 
+{
+int num1, num2, choice;
+
+printf("Enter 2 no's:");
+scanf("%d %d", &num1, &num2);
+
+printf("\n Make a choice:\n");
+printf("1. Addition\n");
+printf("2. Subtraction\n");
+printf("3. Multiplication\n");
+printf("4. Division\n");
+scanf("%d", &choice);
+
+
+switch(choice) 
+{
+case 1:
+    printf("Addition = %d",add(num1, num2)); 
+    break;
+case 2:
+    printf("Subtraction = %d",sub(num1, num2));
+    break;
+case 3:
+    printf("Multiplication = %d",mult(num1, num2));
+    break;
+case 4:
+    printf("Division = %.2f",div(num1, num2));
+   break;
+case 5:
+    printf("Enter a number:");
+    scanf("%d", &num1);
+    printf("Factorial = %d", fact(num1));
+    break;
+
+   default:
+       printf("Invalid choice!");
+ } 
+return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
